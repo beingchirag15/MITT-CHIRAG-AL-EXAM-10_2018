@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  vars:
+    test_users:
+      bob: Test12345
+      alice: Test123
+  tasks:
+    - name: Install sshpass package
+      package:
+        name: sshpass
+        state: present
+      become: yes
+
+    - name: Test ssh connection for users
+      command: ssh {{ chirag }}@192.168.91.133 'echo success'
+      with_dict: '{{ chirag }}'
