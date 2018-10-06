@@ -1,3 +1,35 @@
+Nagios Running Status
+chirag@ubuntu:~$ sudo service nagios status
+● nagios.service - Nagios Core 4.4.1
+   Loaded: loaded (/lib/systemd/system/nagios.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-10-05 19:27:27 CDT; 28min ago
+     Docs: https://www.nagios.org/documentation
+  Process: 28456 ExecStart=/usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg (code=exi
+  Process: 28453 ExecStartPre=/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg (code=
+ Main PID: 28457 (nagios)
+   CGroup: /system.slice/nagios.service
+           ├─28457 /usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg
+           ├─28458 /usr/local/nagios/bin/nagios --worker /usr/local/nagios/var/rw/nagios.qh
+           ├─28459 /usr/local/nagios/bin/nagios --worker /usr/local/nagios/var/rw/nagios.qh
+           ├─28460 /usr/local/nagios/bin/nagios --worker /usr/local/nagios/var/rw/nagios.qh
+           ├─28461 /usr/local/nagios/bin/nagios --worker /usr/local/nagios/var/rw/nagios.qh
+           └─28462 /usr/local/nagios/bin/nagios -d /usr/local/nagios/etc/nagios.cfg
+
+Oct 05 19:34:57 ubuntu nagios[28457]: wproc:   early_timeout=0; exited_ok=1; wait_status=32512; error
+Oct 05 19:34:57 ubuntu nagios[28457]: wproc:   stderr line 01: /bin/sh: 1: /bin/mail: not found
+Oct 05 19:34:57 ubuntu nagios[28457]: wproc:   stderr line 02: /usr/bin/printf: write error: Broken p
+Oct 05 19:35:34 ubuntu nagios[28457]: SERVICE NOTIFICATION: nagiosadmin;localhost;Root Partition;CRIT
+Oct 05 19:35:34 ubuntu nagios[28457]: wproc: NOTIFY job 6 from worker Core Worker 28460 is a non-chec
+Oct 05 19:35:34 ubuntu nagios[28457]: wproc:   host=localhost; service=Root Partition; contact=nagios
+Oct 05 19:35:34 ubuntu nagios[28457]: wproc:   early_timeout=0; exited_ok=1; wait_status=32512; error
+Oct 05 19:35:34 ubuntu nagios[28457]: wproc:   stderr line 01: /bin/sh: 1: /bin/mail: not found
+Oct 05 19:35:34 ubuntu nagios[28457]: wproc:   stderr line 02: /usr/bin/printf: write error: Broken p
+Oct 05 19:36:27 ubuntu nagios[28457]: HOST ALERT: localhost;DOWN;HARD;10;(No output on stdout) stderr
+lines 1-25/25 (END)
+
+
+=====>Intalllation Command
+
 Security-Enhanced Linux
 This guide is based on SELinux being disabled or in permissive mode. SELinux is not enabled by default on Ubuntu. If you would like to see if it is installed run the following command:
 
