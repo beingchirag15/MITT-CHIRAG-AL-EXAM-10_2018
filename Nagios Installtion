@@ -108,3 +108,4 @@ Nagios is now running, to confirm this you need to log into the Nagios Web Inter
 Point your web browser to the ip address or FQDN of your Nagios Core server, for example:
 
 http://localhost/nagios
+
