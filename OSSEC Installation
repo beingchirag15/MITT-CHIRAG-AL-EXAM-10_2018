@@ -9,3 +9,4 @@ sudo apt-get install ossec-hids-server
 
 # Agent
 sudo apt-get install ossec-hids-agent
+
